@@ -1,0 +1,14 @@
+<h2>{{titolo}}</h2>
+<p>Template-driven form</p>
+<form #autoForm="ngForm" (ngSubmit)="onSubmit()" *ngIf="base">
+	<input type="text" name="marca" [(ngModel)]="base.marca" placeholder="Marca" list="marche" size="40" required>
+	<datalist id="marche">
+		<option *ngFor="let marc of marche" [value]="marc">{{marc}}</option>
+	</datalist><br>
+	<input type="text" placeholder="Modello" name="modello" [(ngModel)]="base.modello" #modello="ngModel" size="40" required><br>
+	<div [hidden]="modello.valid || modello.pristine" class="alert">Il modello è necessario</div>
+	<input type="text" name="prezzo" placeholder="Prezzo" [(ngModel)]="base.prezzo" size="40" required><br>
+	<input type="text" name="colore" placeholder="Colore" [(ngModel)]="base.colore"><br>
+	<input type="text" name="targa" placeholder="Targa" [(ngModel)]="base.targa"><br>
+	<input type="submit" value="Invia" [disabled]="!autoForm.form.valid">
+</form>

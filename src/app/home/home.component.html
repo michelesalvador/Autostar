@@ -1,0 +1,11 @@
+<h2>Welcome</h2>
+<p>Autostar è un sito dedicato alle auto nuove e usate.</p>
+<hr>
+<section>
+	<article *ngFor="let autom of vetrinaAuto">
+		<h3>{{autom.marca}} {{autom.modello}} <em *ngIf="!autom.targa">Nuova!</em></h3>
+		<p>{{ autom.prezzo | formattaEuro }}</p>
+		<a [routerLink]="['auto',autom.id]">Dettagli</a>
+	</article>
+</section>
+<hr>

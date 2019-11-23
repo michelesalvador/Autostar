@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: rgb(227, 227, 228);
+}
+h2 {
+	font-size: 50px;
+	color: #666;
+	font-weight: 100;
+	text-shadow: #999 0 0 3px;
+	border-bottom: thin solid #ddd;
+}
+h3 {
+	font-size: 30px;
+	color: #333;
+	font-weight: 400;
+}
+a {
+	color: orangered;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	color: brown;
+}
+hr {
+	background-color: rgb(200, 200, 200);
+	border: 0;
+	height: 1px;
+}

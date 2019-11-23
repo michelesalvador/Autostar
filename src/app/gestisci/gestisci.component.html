@@ -1,0 +1,30 @@
+<h2>Inserisci 2</h2>
+<p>Reactive form</p>
+<form [formGroup]="autoForm" (ngSubmit)="onSubmit()">
+	<div>
+		<div>
+			<label>Marca</label><input type="text" formControlName="marca">
+			<span class="alert" *ngIf="(marca.dirty || marca.touched) && marca.invalid && marca.errors.required">Marca obbligatoria</span>
+			<span class="alert" *ngIf="(marca.dirty || marca.touched) && marca.invalid && marca.errors.maxlength">Troppi caratteri</span>
+		</div>
+		<div>
+			<label>Modello</label><input type="text" formControlName="modello">
+			<span class="alert" *ngIf="modello.dirty && modello.invalid && modello.errors.required">Modello obbligatorio</span>
+			<span class="alert" *ngIf="modello.invalid && modello.errors.maxlength">Troppi caratteri</span>
+		</div>
+		<div>
+			<label>Prezzo</label><input type="text" formControlName="prezzo">
+			<span class="alert" *ngIf="prezzo.dirty && prezzo.invalid && prezzo.errors.required">Prezzo obbligatorio</span>
+			<span class="alert" *ngIf="prezzo.dirty && prezzo.invalid && prezzo.errors.pattern">Prezzo non numerico</span>
+		</div>
+		<div>
+			<label>Colore</label><input type="text" formControlName="colore">
+		</div>
+		<div>
+			<label>Targa</label><input type="text" formControlName="targa">
+			<span class="alert" *ngIf="targa.invalid && targa.errors.maxlength">Troppi caratteri</span>
+		</div>
+	</div>
+	<input type="submit" value="Invia" [disabled]="!autoForm.valid">
+</form>
+<!-- {{ marca.errors | json }} -->

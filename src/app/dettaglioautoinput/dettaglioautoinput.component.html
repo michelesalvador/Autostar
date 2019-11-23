@@ -1,0 +1,9 @@
+<div id="dettaglio">
+	<div (click)="chiudiDettaglio()" id="x">X</div>
+	<h3>{{automobile.marca}} {{automobile.modello}}</h3>
+	<strong>{{automobile.prezzo}} €</strong>
+	<div>Colore <span [style.backgroundColor]="automobile.colore"> </span></div> 
+	<ng-container *ngIf="automobile.targa">Targa: {{automobile.targa}}<br></ng-container>
+	<button (click)="eliminaAuto(automobile.id)">Elimina</button>
+	<button [routerLink]="['/modifica',automobile.id]">Modifica</button>
+</div>

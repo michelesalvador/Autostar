@@ -1,0 +1,14 @@
+/*span:nth-of-type(odd) {
+	background-color: rgb(243, 244, 245);
+}*/
+span {
+	border: 1px solid rgb(206, 206, 206);
+	padding: 5px 15px;
+	background-color: #f9f9f9;
+	display: inline-block;
+	cursor: pointer;
+	color: orangered;
+}
+hr {
+	margin: 30px 0;
+}

@@ -1,0 +1,50 @@
+form div {
+	display: table;
+}
+form div div {
+	display: table-row;
+}
+form label, form input:not([type="submit"]), form div div span {
+	display: table-cell;
+	padding: 8px 13px;
+	font-size: 1.3em;
+}
+label {
+	text-align: right;
+	color: #666;
+}
+form div div input {
+	border: thin solid #ccc;
+}
+
+form div div .ng-invalid:not(form) {
+	border-left: 5px solid red;
+}
+form div div .ng-valid:not(form) {
+	border-left: 5px solid #3c1;
+}
+form div div span {
+	color: red;
+	background-color: #fdc;
+	font-size: 1em;
+}
+
+input[type="submit"] {
+	width: 120px;
+	background-color: #456;
+	color: white;
+	border-radius: 8px;
+	padding: 10px;
+	margin-top: 15px;
+	margin-left: 170px;
+	cursor: pointer;
+}
+input[type="submit"]:active {
+	background-color:#234;
+	color: orange;
+}
+input[type="submit"]:disabled {
+	background-color:#999;
+	color: #ccc;
+	cursor: default;
+}

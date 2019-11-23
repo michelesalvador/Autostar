@@ -1,0 +1,17 @@
+<h2>{{titolo}}</h2>
+
+<!-- Uso del link col Routing -->
+<div>
+	<ng-container *ngFor="let autor of catalogoauto">
+		<!-- <span><a [routerLink]="['/auto',xid]">{{auto.marca}} {{auto.modello}}</a></span> -->
+		<span>&nbsp;<a [routerLink]="['/catalogo',tipoCatalogo,{outlets: {dettaglio:['auto', autor.id]}}]">{{autor.marca}} {{autor.modello}}</a>&nbsp;</span>
+	</ng-container>
+</div>
+<router-outlet name="dettaglio"></router-outlet>
+<hr>
+
+<!-- Passaggio diretto di un oggetto Auto -->
+<span *ngFor="let auto of catalogoauto" (click)="dettaglioAuto(auto)">&nbsp;{{auto.marca}} {{auto.modello}}&nbsp;</span>
+<div *ngIf="mostraDettaglio">
+	<app-dettaglioauto-input [automobile]="auto" (chiuditore)="invalidaDettaglio()" (eliminatore)="distruggiAuto($event)"></app-dettaglioauto-input>
+</div>

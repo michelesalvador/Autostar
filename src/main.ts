@@ -5,8 +5,16 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
-  enableProdMode();
+	enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+	.catch(err => console.error(err));
+
+/*console.log("main"); // ok
+
+export let globbale = 'Pippo'; // no
+
+export function globale() { // no
+	return 'ciao';
+}*/
