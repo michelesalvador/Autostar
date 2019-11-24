@@ -1,6 +1,6 @@
 {
   "name": "autostar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -23,6 +23,7 @@
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1",
+    "express": "^4.17.1",
     "@angular/cli": "~8.3.18",
     "@angular/compiler-cli": "~8.2.13"
   },
