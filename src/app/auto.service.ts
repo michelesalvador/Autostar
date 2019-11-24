@@ -7,7 +7,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 	providedIn: 'root'
 })
 export class AutoService {
-	private dominio = 'http://localhost:8080';
+	//private dominio = 'http://localhost:8080';
+	private dominio = 'http://192.168.43.52:8080';
 	private servizi = [ '/vetrina/', '/catalogo/', '/auto/', '/invia', '/invia', '/elimina/' ];
 	// Carlo
 	//private dominio = 'http://192.168.0.167:8080';
