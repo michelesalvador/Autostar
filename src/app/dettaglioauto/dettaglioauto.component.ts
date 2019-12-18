@@ -14,7 +14,7 @@ export class DettaglioautoComponent implements OnInit {
 	autom: Auto;
 
 	// ActivatedRoute rappresenta il link che è stato cliccato
-	constructor( private route: ActivatedRoute, private router:Router, private autoService: AutoService, private auth:AuthService ) {}
+	constructor( private route: ActivatedRoute, private router:Router, private autoService: AutoService, public auth:AuthService ) {}
 
 	ngOnInit() {
 		this.route.paramMap.subscribe( parametri => {

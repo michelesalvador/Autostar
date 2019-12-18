@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 	form: FormGroup;
 
 	constructor(private fb: FormBuilder,
-		private auth: AuthService,
+		public auth: AuthService,
 		private router: Router) {
 
 		this.form = this.fb.group({

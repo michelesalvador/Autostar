@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'Autostar';
   tipoCat : number;	// tipo catalogo passato con il variable binding -> Input
 
-  constructor( private router:Router, private auth: AuthService ) {}
+  constructor( private router:Router, public auth: AuthService ) {}
 
   goHome() {
 	this.router.navigate(['']);
