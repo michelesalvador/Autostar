@@ -62,9 +62,21 @@ nav a:active {
 	color: orange;
 	border-color: orange;
 }
+aside {
+	position: absolute;
+	top: 20px;
+	right: 35px;
+}
+aside a {
+	color: white;
+	cursor: pointer;
+}
+
+
 #main div {
 	padding: 0 30px;
 }
+
 footer {
 	background-color: #234;
 	padding: 20px 30px;

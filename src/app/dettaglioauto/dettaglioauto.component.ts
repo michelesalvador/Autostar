@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Auto } from '../model/auto';
 import { AutoService } from '../auto.service';
+import { AuthService } from '../auth.service';
 
 @Component({
 	selector: 'app-dettaglioauto',
@@ -13,7 +14,7 @@ export class DettaglioautoComponent implements OnInit {
 	autom: Auto;
 
 	// ActivatedRoute rappresenta il link che è stato cliccato
-	constructor( private route: ActivatedRoute, private router:Router, private autoService: AutoService ) {}
+	constructor( private route: ActivatedRoute, private router:Router, private autoService: AutoService, private auth:AuthService ) {}
 
 	ngOnInit() {
 		this.route.paramMap.subscribe( parametri => {

@@ -7,8 +7,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 	providedIn: 'root'
 })
 export class AutoService {
-	//private dominio = 'http://localhost:8080';
-	private dominio = 'http://192.168.43.52:8080';
+	private dominio = 'http://localhost:8080';
+	//private dominio = 'http://192.168.43.52:8080';
 	private servizi = [ '/vetrina/', '/catalogo/', '/auto/', '/invia', '/invia', '/elimina/' ];
 	// Carlo
 	//private dominio = 'http://192.168.0.167:8080';
@@ -19,6 +19,7 @@ export class AutoService {
 	constructor( private http: HttpClient ) {
 		//this.catalogoauto = autorepository;
 	}
+
 	public vetrinaAuto( quante:number ) {
 		return this.http.get( this.dominio + this.servizi[0] + quante );
 	}

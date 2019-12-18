@@ -61,3 +61,9 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+
+// Aggiunti da me per risolvere 'Uncaught ReferenceError: global is not defined'
+//(window as any).global = window;
+//global.Buffer = global.Buffer || require('buffer').Buffer;
+//(window as any).process = { env: { DEBUG: undefined } };

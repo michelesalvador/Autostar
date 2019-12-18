@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InserisciAutoComponent } from './inserisci-auto/inserisci-auto.component';
 import { GestisciComponent } from './gestisci/gestisci.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
 	{ path: 'inserisci', component: InserisciAutoComponent },
 	{ path: 'inserisci2', component: GestisciComponent },
 	{ path: 'auto/:aid', component: DettaglioautoComponent },
+	{ path: 'login', component: LoginComponent },
 	{ path: '**', component: PageNotFoundComponent }
 ];
 

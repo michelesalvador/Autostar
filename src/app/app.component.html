@@ -15,10 +15,16 @@
 				<li><a routerLink="catalogo/2">Auto usate</a></li>
 				<!-- <li><button (click)="scegliCatalogo(1)">Auto nuove</button>
 				<button (click)="scegliCatalogo(2)">Auto usate</button></li> -->
-				<li><a routerLink="inserisci">Inserisci auto</a></li>
-				<li><a routerLink="inserisci2">Inserisci auto 2</a></li>
+				<li *ngIf="auth.isLoggedIn()"><a routerLink="inserisci">Inserisci auto</a></li>
+				<li *ngIf="auth.isLoggedIn()"><a routerLink="inserisci2">Inserisci auto 2</a></li>
 			</ul>
 		</nav>
+		<aside>
+			<a routerLink="login" *ngIf="auth.isLoggedOut(); else Logout">Login</a>
+			<ng-template #Logout>
+				<a (click)="auth.logout()">Logout</a>
+			</ng-template>
+		</aside>
 	</header>
 	<div>
 		<!-- <app-catalogoauto [tipoCatalogoInput]="tipoCat"></app-catalogoauto>

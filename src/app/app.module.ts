@@ -13,8 +13,19 @@ import { InserisciAutoComponent } from './inserisci-auto/inserisci-auto.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GestisciComponent } from './gestisci/gestisci.component';
 import { FormattaEuroPipe } from './formatta-euro.pipe';
+import { LoginComponent } from './login/login.component';
+import { JwtModule } from "@auth0/angular-jwt";
+
+export function tokennoGetter() {
+	let token = localStorage.getItem("access_token");
+	if( !token )
+		return "sdfdafxx.sadffsad.asdfsfda";
+	else
+		return token;
+}
 
 @NgModule({
+  bootstrap: [AppComponent],
   declarations: [
     AppComponent,
     CatalogoautoComponent,
@@ -24,16 +35,26 @@ import { FormattaEuroPipe } from './formatta-euro.pipe';
 	PageNotFoundComponent,
 	InserisciAutoComponent,
 	GestisciComponent,
-	FormattaEuroPipe
+	FormattaEuroPipe,
+	LoginComponent
   ],
   imports: [
     BrowserModule,
 	AppRoutingModule,
 	HttpClientModule,
 	FormsModule,
-	ReactiveFormsModule
+	ReactiveFormsModule,
+	JwtModule.forRoot({
+		config: {
+		  tokenGetter: tokennoGetter,
+		  whitelistedDomains: ["localhost:8080"],
+		  blacklistedRoutes: ["example.com/examplebadroute/"],
+		  //headerName: "YourHeaderName", // il default è 'Authorization'
+		  throwNoTokenError: true
+		  //authScheme: "" // di default aggiunge 'Bearer ' davanti al token
+		}
+	  })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: []
 })
 export class AppModule { }

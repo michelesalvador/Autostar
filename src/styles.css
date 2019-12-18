@@ -7,6 +7,7 @@ h2 {
 	color: #666;
 	font-weight: 100;
 	text-shadow: #999 0 0 3px;
+	padding-bottom: 10px;
 	border-bottom: thin solid #ddd;
 }
 h3 {
@@ -28,4 +29,28 @@ hr {
 	background-color: rgb(200, 200, 200);
 	border: 0;
 	height: 1px;
+}
+
+.bottone {
+	padding: 7px 20px 10px;
+	border: 1px solid white;
+	border-radius: 9px;
+	color: #fff;
+	background-color: #567;
+	font-size: 1em;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	cursor: pointer;
+}
+.bottone:hover {
+	background-color: rgb(107, 139, 170);
+}
+.bottone:active {
+	color: orange;
+	background-color: rgb(64, 75, 87);
+	border-color: orange;
+}
+.bottone:disabled {
+	background-color:#999;
+	color: #ccc;
+	cursor: default;
 }

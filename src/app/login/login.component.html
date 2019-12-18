@@ -1,0 +1,21 @@
+<h2>Login</h2>
+<form [formGroup]="form" *ngIf="auth.isLoggedOut(); else Logout">
+	<fieldset>
+		<!-- <legend>Login</legend> -->
+		<div>
+			<label>Email</label>
+			<input formControlName="email" autocomplete="email">
+		</div>
+		<div>
+			<label>Password</label>
+			<input formControlName="password" type="password" autocomplete="current-password">
+		</div>
+	</fieldset>
+	<div>
+		<button (click)="login()" class="bottone">Login</button>
+	</div>
+</form>
+<ng-template #Logout>
+	<p>You are logged in.</p>
+	<button (click)="logout()" class="bottone">Logout</button>
+</ng-template>

@@ -55,20 +55,7 @@ button {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
-	padding: 7px 15px;
-	border: 1px solid white;
-	border-radius: 5px;
-	color: #fff;
-	background-color: #567;
-	font-size: 1em;
 }
 button:first-of-type {
 	right: 130px;
-}
-button:hover {
-	background-color: rgb(107, 139, 170);
-}
-button:active {
-	color: orange;
-	background-color: rgb(64, 75, 87);
 }
