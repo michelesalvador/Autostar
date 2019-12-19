@@ -11,7 +11,9 @@ export class AuthService {
 	constructor( private http: HttpClient ) {}
 
 	login(email: string, password: string) {
-		return this.http.post<User>('http://localhost:8080/login', { email, password }).pipe(
+		//let dominio = 'http://localhost:8080';
+		let dominio = 'https://autostar-server.herokuapp.com';
+		return this.http.post<User>(dominio + '/login', { email, password }).pipe(
 			tap( res => this.setSession(res) ),
 			shareReplay()
 		);

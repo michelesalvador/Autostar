@@ -47,7 +47,7 @@ export function tokennoGetter() {
 	JwtModule.forRoot({
 		config: {
 		  tokenGetter: tokennoGetter,
-		  whitelistedDomains: ["localhost:8080"],
+		  whitelistedDomains: ["localhost:8080", "autostar-server.herokuapp.com"],
 		  blacklistedRoutes: ["example.com/examplebadroute/"],
 		  //headerName: "YourHeaderName", // il default è 'Authorization'
 		  throwNoTokenError: true
