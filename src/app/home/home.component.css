@@ -28,6 +28,7 @@ article:nth-of-type(3) {
 article h3 {
 	margin-top: 0;
 	margin-bottom: 15px;
+	font-size: 22px;
 }
 article em {
 	position: absolute;
@@ -38,6 +39,7 @@ article em {
 	padding: 0 20px 2px;
 	transform: rotate(25deg);
 	font-size: 14px;
+	z-index: 2;
 }
 article p {
 	color: white;
@@ -45,6 +47,14 @@ article p {
 	background-color: rgb(114, 121, 126);
 	font-size: 120%;
 	margin: 0 0 10px;
+}
+article img {
+	position: absolute;
+	width: 120px;
+	height: 80px;
+	top: 20px;
+	right: 20px;
+	object-fit: cover;
 }
 article a {
 	float: right;

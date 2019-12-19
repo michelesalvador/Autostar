@@ -51,6 +51,9 @@ code {
 	border-left: 12px solid rgb(35, 82, 184);
 	border-right: 12px solid rgb(35, 82, 184);
 }
+img {
+	width: 60%;
+}
 button {
 	position: absolute;
 	right: 20px;

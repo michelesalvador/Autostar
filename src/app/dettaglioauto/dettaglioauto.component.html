@@ -4,7 +4,8 @@
 	<div>
 		<data [value]="autom.prezzo">{{ autom.prezzo | formattaEuro }}</data>
 		<div>Colore <span [style.backgroundColor]="autom.colore" [style.color]="autom.colore">{{autom.colore}}</span></div>
-		<ng-container *ngIf="autom.targa">Targa <code>{{autom.targa}}</code></ng-container>
+		<div *ngIf="autom.targa">Targa <code>{{autom.targa}}</code></div>
+		<div *ngIf="autom.foto"><img [src]="['https://www.familygem.app/autostar/img/' + autom.foto]" alt="{{autom.modello}}"></div>
 	</div>
 	<ng-container *ngIf="auth.isLoggedIn()">
 		<button (click)="eliminaAuto(autom.id)" class="bottone">Elimina</button>

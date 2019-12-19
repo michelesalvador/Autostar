@@ -5,6 +5,7 @@
 	<article *ngFor="let autom of vetrinaAuto">
 		<h3>{{autom.marca}} {{autom.modello}} <em *ngIf="!autom.targa">Nuova!</em></h3>
 		<p>{{ autom.prezzo | formattaEuro }}</p>
+		<img *ngIf="autom.foto" [src]="['https://www.familygem.app/autostar/img/' + autom.foto]" alt="{{autom.modello}}">
 		<a [routerLink]="['auto',autom.id]">Dettagli</a>
 	</article>
 </section>

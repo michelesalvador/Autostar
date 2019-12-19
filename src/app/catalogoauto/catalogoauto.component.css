@@ -9,6 +9,13 @@ span {
 	cursor: pointer;
 	color: orangered;
 }
+img {
+	width: 20px;
+	height: 20px;
+	object-fit: cover;
+	vertical-align: -5px;
+	margin-right: 5px;
+}
 hr {
 	margin: 30px 0;
 }
