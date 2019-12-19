@@ -5,6 +5,7 @@ export class Auto {
 		public modello: string,
 		public prezzo: number,
 		public colore?: string,
-		public targa?: string
+		public targa?: string,
+		public foto?: string
 	) { }
 }
