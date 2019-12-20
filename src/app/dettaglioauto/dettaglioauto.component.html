@@ -1,4 +1,4 @@
-<article *ngIf="autom; else notFound">
+<article *ngIf="autom; else loadingOrError">
 	<div (click)="chiudiDettaglio()" id="x">X</div>
 	<h3>{{autom.marca}} {{autom.modello}}</h3>
 	<div>
@@ -12,7 +12,12 @@
 		<button (click)="modificaAuto(autom.id)" class="bottone">Modifica</button>
 	</ng-container>
 </article>
-<ng-template #notFound>
-	<h4>:-(</h4>
-	<p>Auto inesistente.</p>
+<ng-template #loadingOrError>
+	<div *ngIf="errore; else loading">
+		<h4>:-(</h4>
+		Errore di caricamento.
+	</div>
+	<ng-template #loading>
+		Loading...
+	</ng-template>
 </ng-template>

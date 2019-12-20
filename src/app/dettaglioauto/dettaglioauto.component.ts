@@ -12,6 +12,7 @@ import { AuthService } from '../auth.service';
 export class DettaglioautoComponent implements OnInit {
 
 	autom: Auto;
+	errore:boolean;
 
 	// ActivatedRoute rappresenta il link che è stato cliccato
 	constructor( private route: ActivatedRoute, private router:Router, private autoService: AutoService, public auth:AuthService ) {}
@@ -23,8 +24,13 @@ export class DettaglioautoComponent implements OnInit {
 					this.autom = json[0] as Auto;
 				} else {
 					this.autom = null;
+					this.errore = true;
+					console.log(json);
 				}
 			});
+		}, err => {
+			this.errore = true;
+			console.log(err);
 		});
 	}
 
