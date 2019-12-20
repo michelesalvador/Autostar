@@ -1,11 +1,14 @@
 <h2>Welcome</h2>
-<p>Autostar è un sito dedicato alle auto nuove e usate.</p>
+<p>Autostar è una Single Page Application realizzata con Angular in cui puoi comprare auto nuove e usate.</p>
 <hr>
 <section>
-	<article *ngFor="let autom of vetrinaAuto">
+	<article *ngFor="let autom of vetrinaAuto" (click)="apriDettaglio(autom.id)">
 		<h3>{{autom.marca}} {{autom.modello}} <em *ngIf="!autom.targa">Nuova!</em></h3>
-		<p>{{ autom.prezzo | formattaEuro }}</p>
-		<img *ngIf="autom.foto" [src]="['https://www.familygem.app/autostar/img/' + autom.foto]" alt="{{autom.modello}}">
+		<p>
+			<data [value]="autom.prezzo">{{ autom.prezzo | formattaEuro }}</data>
+			<span class="gradient"></span>
+			<img *ngIf="autom.foto" [src]="['https://www.familygem.app/autostar/img/' + autom.foto]" alt="{{autom.modello}}">
+		</p>
 		<a [routerLink]="['auto',autom.id]">Dettagli</a>
 	</article>
 </section>
